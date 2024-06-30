@@ -10,7 +10,7 @@
             />
             <LayoutCardsColumn :cards="readyCards" status="ready" color="#026600" name="Готово" />
         </div>
-        <div v-else>No cards yet</div>
+        <div v-else class="w-full text-center pt-10">No cards yet</div>
     </div>
 </template>
 

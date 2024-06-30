@@ -29,4 +29,7 @@ export const mutations: MutationTree<RootState> = {
         const newCard: Card = { id: uuid(), status: 'todo', name };
         state.cards = [...state.cards, newCard];
     },
+    deleteCard(state, id: string) {
+        state.cards = state.cards.filter(card => card.id !== id);
+    },
 };

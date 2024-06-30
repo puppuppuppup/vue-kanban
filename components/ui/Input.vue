@@ -9,6 +9,11 @@ export default defineComponent({
     data: () => ({
         value: '',
     }),
+    methods: {
+        clear() {
+            this.value = '';
+        },
+    },
 });
 </script>
 

@@ -17,7 +17,7 @@
 export default {
     computed: {
         cards() {
-            return this.$store.getters.cards;
+            return this.$store.state.cards;
         },
         newCardName(): string {
             return (this.$refs?.newCardInput as { value: string } | undefined)?.value || '';
@@ -26,6 +26,7 @@ export default {
     methods: {
         addNewCard() {
             this.$store.commit('addCard', { name: this.newCardName });
+            this.$refs?.newCardInput?.clear();
         },
     },
 };
